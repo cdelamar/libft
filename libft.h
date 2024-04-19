@@ -62,7 +62,7 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-
+int				ft_rev_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_binary(int index);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putnbr_fd(int n, int fd);

@@ -6,7 +6,7 @@
 /*   By: cdelamar <cdelamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:11:32 by cdelamar          #+#    #+#             */
-/*   Updated: 2023/10/27 21:08:24 by cdelamar         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:40:09 by cdelamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,3 @@ int	ft_isalnum(int c)
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
 			&& c <= '9'));
 }
-/*
-int	main(void)
-{
-	int n = 5;
-	printf("%d\n", isalnum(n));
-	printf("%d\n", ft_isalnum(n));
-
-
-}*/

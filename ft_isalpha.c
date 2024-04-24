@@ -6,7 +6,7 @@
 /*   By: cdelamar <cdelamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:11:38 by cdelamar          #+#    #+#             */
-/*   Updated: 2023/10/27 21:08:20 by cdelamar         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:40:14 by cdelamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,4 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-/*
-int	main(void)
-{
-	int n = 'E';
-	printf("%d\n", isalpha(n));
-	printf("%d\n", ft_isalpha(n));
 
-
-}*/

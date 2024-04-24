@@ -6,7 +6,7 @@
 /*   By: cdelamar <cdelamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:11:29 by cdelamar          #+#    #+#             */
-/*   Updated: 2023/10/27 17:35:59 by cdelamar         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:39:59 by cdelamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset((unsigned char *)ptr, 0, nmemb * size);
 	return (ptr);
 }
-
 /*
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	unsigned char	*ptr;
-	size_t	i;
-
-	i = 0;
-	if (nmemb == 0 && size == 0)
-		return (NULL);
-	ptr = (void *)malloc(nmemb * size);
-	if (ptr != NULL)
-		ft_memset(ptr, 0, nmemb * size);
-	else
-		return(NULL);
-	while (i < nmemb)
-	{
-		ptr[i] = 0;
-		i++;
-	}
-	return (ptr);
-}
-
 int	main(void)
 {
 	size_t test = 8;

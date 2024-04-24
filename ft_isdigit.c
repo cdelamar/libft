@@ -6,7 +6,7 @@
 /*   By: cdelamar <cdelamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:11:44 by cdelamar          #+#    #+#             */
-/*   Updated: 2023/10/27 21:08:21 by cdelamar         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:40:58 by cdelamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*
-int	main(void)
-{
-	char n = '1';
-	printf("%d\n", isdigit(n));
-	printf("%d\n", ft_isdigit(n));
-}*/

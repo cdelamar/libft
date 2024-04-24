@@ -6,7 +6,7 @@
 /*   By: cdelamar <cdelamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:11:48 by cdelamar          #+#    #+#             */
-/*   Updated: 2023/10/27 21:08:22 by cdelamar         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:41:13 by cdelamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	return (c >= ' ' && c <= '~');
 }
-/*
-int	main(void)
-{
-	char test = '\0';
-
-	if(ft_isprint(test) == 1)
-		printf("printable\n");
-	else
-		printf("not printable\n");
-
-}*/

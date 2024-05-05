@@ -53,7 +53,8 @@ FILES = ft_atoi \
 	ft_putstr_fd \
 	ft_putendl_fd \
 	ft_binary \
-	ft_error_message
+	ft_error_message \
+	ft_flood_fill
 
 BONUS =	ft_lstnew \
 	ft_lstadd_front \

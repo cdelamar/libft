@@ -26,6 +26,12 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct  s_point
+{
+    int           x;
+    int           y;
+}               t_point;
+
 int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 char				*ft_itoa(int n);
@@ -69,6 +75,8 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_error_message(char *str);
+void				ft_flood_fill(char **tab, t_point size, t_point begin);
+
 
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);

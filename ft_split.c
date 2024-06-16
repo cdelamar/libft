@@ -12,128 +12,51 @@
 
 #include "libft.h"
 
-static int	words_counter(char const *s, char c)
+static int	ft_split_count(const char *str, char c)
 {
-	int	counter;
+	int	i;
+	int	output;
 
-	counter = 0;
-	if (!*s)
+	if (!str)
 		return (0);
-	while (*s)
-	{
-		while (*s == c)
-			s++;
-		if (*s)
-			counter++;
-		while (*s != c && *s)
-			s++;
-	}
-	return (counter);
-}
-
-static size_t	get_word_size(char const *s, char c)
-{
-	size_t	word_size;
-
-	word_size = 0;
-	while (*s == c && *s)
-		s++;
-	while (*s != c && *s)
-	{
-		word_size++;
-		s++;
-	}
-	return (word_size);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**res;
-	int		i;
-	int		words;
-	size_t	word_size;
-
 	i = 0;
-	words = words_counter(s, c);
-	res = (char **)malloc((words + 1) * sizeof(char *));
-	if (res == NULL)
-		return (NULL);
-	while (*s)
+	output = 0;
+	while (str[i])
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-		{
-			word_size = get_word_size(s, c);
-			res[i++] = ft_substr(s, 0, word_size);
-			s += word_size;
-		}
+		while (str[i] == c && str[i])
+			i++;
+		if (str[i] != c && str[i])
+			output++;
+		while (str[i] != c && str[i])
+			i++;
 	}
-	res[i] = NULL;
-	return (res);
-}
-/*
-static int	words_counter(char const *s, char c)
-{
-	int	counter;
-
-	counter = 0;
-	if (!*s)
-		return (0);
-	while (*s)
-	{
-		while (*s == c)
-			s++;
-		if (*s)
-			counter++;
-		while (*s != c && *s)
-			s++;
-	}
-	return (counter);
+	return (output);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *str, char c)
 {
-	char	**res;
+	char	**output;
+	int		start;
+	int		size;
 	int		i;
-	int		words;
-	size_t	word_size;
 
-	i = 0;
-	words = words_counter(s, c);
-	res = (char **)malloc((words + 1) * sizeof(char *));
-	if (res == NULL)
+	output = malloc((ft_split_count(str, c) + 1) * sizeof(char *));
+	if (!output)
 		return (NULL);
-	while (*s)
+	start = 0;
+	size = 0;
+	i = 0;
+	while (str[start + size])
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-		{
-			if (!ft_strchr(s, c))
-				word_size = ft_strlen(s);
-			else
-				word_size = ft_strchr(s, c) - s;
-			res[i++] = ft_substr(s, 0, word_size);
-			s += word_size;
-		}
+		start += size;
+		while (str[start] == c && str[start])
+			start++;
+		size = 0;
+		while (str[start + size] != c && str[start + size])
+			size++;
+		if (size)
+			output[i++] = ft_substr(str, start, size);
 	}
-	res[i] = NULL;
-	return (res);
+	output[i] = NULL;
+	return (output);
 }
-
-int	main(void)
-{
-	char tab[] = "test toast taste";
-	char    **res = ft_split(tab, ' ');
-	int i = 0;
-
-	while(res[i] != NULL)
-	{
-		printf("%s\n", res[i]);
-		free(res[i]);
-		i++;
-	}
-	free(res);
-	return (0);
-}*/
